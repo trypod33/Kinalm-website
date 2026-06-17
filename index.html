@@ -1,436 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinalm v2.1.0 | Built by a caregiver for caregiving families</title>
-  <meta name="description" content="Kinalm is a private Android app built by a caregiver to help families keep track of appointments, medications, routines, and daily care for multiple people in one place." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinalm</title>
+  <meta name="description" content="Download Kinalm for Android.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f4efe8;
-      --surface: #fffdfa;
-      --surface-soft: #f8f3ed;
-      --surface-warm: #f2ebe3;
-      --text: #2f2925;
-      --muted: #655d56;
-      --soft-text: #837a72;
-      --line: #ddd1c3;
-      --primary: #6d59b3;
-      --primary-dark: #56438f;
-      --teal: #2d8b84;
-      --teal-soft: #e6f3f1;
-      --shadow: 0 18px 50px rgba(55, 42, 31, 0.08);
-      --radius-xl: 30px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --radius-sm: 12px;
+      --bg: #f4f8fc;
+      --surface: #ffffff;
+      --text: #182536;
+      --muted: #63748a;
+      --primary: #0c61ad;
+      --primary-hover: #094c87;
+      --border: rgba(15, 36, 59, 0.1);
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+      --radius: 24px;
     }
-
     * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-      background:
-        radial-gradient(circle at top right, rgba(109, 89, 179, 0.12), transparent 28%),
-        radial-gradient(circle at left 20%, rgba(45, 139, 132, 0.08), transparent 24%),
-        linear-gradient(180deg, #f8f4ef 0%, #f0e9e0 100%);
-    }
-
-    a { color: inherit; }
-
-    .wrap {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 24px 0 72px;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 13px;
+      min-height: 100vh;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, rgba(109, 89, 179, 0.16), rgba(45, 139, 132, 0.12));
-      color: var(--primary-dark);
-      font-size: 1.1rem;
-      box-shadow: inset 0 0 0 1px rgba(109, 89, 179, 0.10);
-    }
-
-    .hero {
-      background: rgba(255, 253, 250, 0.93);
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      box-shadow: var(--shadow);
-      padding: 38px 30px 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      top: -80px;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(109, 89, 179, 0.14), transparent 68%);
-      pointer-events: none;
-    }
-
-    .eyebrow,
-    .mini-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-
-    .eyebrow {
-      padding: 8px 14px;
-      background: var(--teal-soft);
-      color: #275f5b;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-    }
-
-    .mini-pill {
-      margin-top: 14px;
-      padding: 8px 13px;
-      background: rgba(109, 89, 179, 0.10);
-      color: var(--primary-dark);
-      font-size: 0.92rem;
-    }
-
-    h1 {
-      margin: 18px 0 12px;
-      max-width: 840px;
-      font-size: clamp(2.45rem, 6vw, 4.45rem);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-    }
-
-    .lead {
-      margin: 0;
-      max-width: 780px;
-      font-size: 1.16rem;
-      color: #4f4841;
-    }
-
-    .story-box {
-      margin-top: 22px;
-      max-width: 820px;
-      padding: 18px 18px 18px 20px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, rgba(45, 139, 132, 0.10), rgba(109, 89, 179, 0.08));
-      border: 1px solid #d7d4e4;
-      color: #49423c;
-    }
-
-    .story-box strong {
+      padding: 24px;
+      font-family: 'Inter', Arial, sans-serif;
+      background: radial-gradient(circle at top, rgba(12,97,173,.16), transparent 30%), var(--bg);
       color: var(--text);
     }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 14px;
-      padding: 14px 18px;
-      font-weight: 800;
-      transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
-    }
-
-    .btn:hover { transform: translateY(-1px); opacity: 0.97; }
-    .btn.primary { background: var(--primary); color: #fff; }
-    .btn.secondary { background: #222831; color: #fff; }
-    .btn.ghost { background: var(--surface-soft); border: 1px solid var(--line); color: #3f3832; }
-
-    .hero-notes {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .note-card,
-    .panel {
+    main {
+      width: min(100%, 560px);
       background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
+      padding: 48px 32px;
+      text-align: center;
     }
-
-    .note-card {
-      padding: 16px 15px;
-      background: rgba(255, 253, 250, 0.88);
-    }
-
-    .note-card strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--primary-dark);
-      font-size: 1rem;
-    }
-
-    .note-card span {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .panel {
-      padding: 24px 22px;
-    }
-
-    .panel h2 {
+    h1 {
       margin: 0 0 12px;
-      font-size: 1.18rem;
-      line-height: 1.2;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      letter-spacing: -0.04em;
     }
-
-    .panel p {
-      margin: 0;
-      color: #575049;
+    p {
+      margin: 0 auto 28px;
+      max-width: 32ch;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--muted);
     }
-
-    .list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .list li {
-      padding: 11px 0;
-      border-bottom: 1px solid #eee3d7;
-      color: #534c45;
-    }
-
-    .list li:last-child { border-bottom: none; }
-
-    .checks li::before {
-      content: "✓";
-      color: var(--teal);
-      font-weight: 800;
-      margin-right: 10px;
-    }
-
-    .quote-card {
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: var(--radius-md);
-      background: var(--surface-warm);
-      border: 1px solid #e5d8ca;
-      color: #4e4740;
-    }
-
-    .steps {
-      counter-reset: install;
-    }
-
-    .steps li {
-      position: relative;
-      padding: 10px 0 10px 38px;
-    }
-
-    .steps li::before {
-      counter-increment: install;
-      content: counter(install);
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 24px;
-      height: 24px;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
       border-radius: 999px;
-      background: rgba(109, 89, 179, 0.12);
-      color: var(--primary-dark);
-      text-align: center;
-      line-height: 24px;
-      font-size: 0.82rem;
-      font-weight: 800;
-    }
-
-    .support-strip {
-      margin-top: 18px;
-      padding: 18px 20px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, rgba(109, 89, 179, 0.10), rgba(45, 139, 132, 0.10));
-      border: 1px solid #d7cfe8;
-      color: #47413a;
-    }
-
-    .footer-note {
-      text-align: center;
-      margin-top: 26px;
-      color: var(--soft-text);
-      font-size: 0.95rem;
-    }
-
-    .footer-note a {
-      color: var(--primary-dark);
-      font-weight: 700;
+      background: var(--primary);
+      color: #fff;
       text-decoration: none;
+      font-weight: 800;
+      transition: background 180ms ease, transform 180ms ease;
     }
-
-    @media (max-width: 880px) {
-      .hero-notes,
-      .section-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 30px 20px 22px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .wrap {
-        width: min(100% - 20px, 1120px);
-      }
-
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      h1 {
-        font-size: clamp(2.1rem, 10vw, 3rem);
-      }
-    }
+    a:hover { background: var(--primary-hover); transform: translateY(-1px); }
   </style>
 </head>
-<body id="top">
-  <main class="wrap">
-    <div class="topbar">
-      <a class="brand" href="#top">
-        <span class="brand-mark">K</span>
-        <span>Kinalm</span>
-      </a>
-      <span>Free Android beta for family caregiving</span>
-    </div>
-
-    <section class="hero">
-      <div class="eyebrow">Built by a caregiver for caregiving families</div>
-      <div class="mini-pill">Now available: Kinalm v2.1.0</div>
-      <h1>Kinalm was built to help one family keep up with real caregiving life.</h1>
-      <p class="lead">Track appointments, medications, routines, and day-to-day care for more than one person in one calm Android app.</p>
-
-      <div class="story-box">
-        <strong>Why Kinalm exists:</strong> I am a caregiver for my two autistic daughters, and I needed a better way to keep track of their appointments and medications along with my own and my wife’s. Kinalm started as something built for our household first, and now I am sharing it in case it helps other families too.
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="#install">How to install</a>
-        <a class="btn secondary" href="mailto:hello@kinalm.app?subject=Kinalm%20APK%20request">Request the APK</a>
-        <a class="btn ghost" href="#support">Get support</a>
-      </div>
-
-      <div class="hero-notes">
-        <div class="note-card">
-          <strong>Made for real households</strong>
-          <span>Built around the daily reality of juggling care for multiple people, not just one patient profile.</span>
-        </div>
-        <div class="note-card">
-          <strong>Private and practical</strong>
-          <span>Focused on the things families need every day: medications, appointments, routines, and quick notes.</span>
-        </div>
-        <div class="note-card">
-          <strong>Still in beta</strong>
-          <span>Free to use while it improves, with updates shaped by feedback from families and caregivers.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-grid">
-      <article class="panel">
-        <h2>What Kinalm helps with</h2>
-        <ul class="list checks">
-          <li>Keep up with medications for more than one person.</li>
-          <li>Track appointments and routine follow-through in one place.</li>
-          <li>Manage recurring care tasks without relying on memory alone.</li>
-          <li>Log simple daily notes that matter when life gets busy.</li>
-          <li>Reduce the mental load of switching between different people’s needs.</li>
-        </ul>
-      </article>
-
-      <article class="panel">
-        <h2>Who this is for</h2>
-        <p>Kinalm is for family caregivers, special-needs families, parents, and households that are balancing care for several people at once. It is designed to feel warm, clear, and low-pressure on the kinds of days when everything already feels like a lot.</p>
-        <div class="quote-card">If your family is managing appointments, medications, routines, and health notes across multiple people, Kinalm is meant to make that feel more organized and less overwhelming.</div>
-      </article>
-    </section>
-
-    <section class="section-grid">
-      <article class="panel" id="support">
-        <h2>Why this page is different</h2>
-        <ul class="list">
-          <li>This is not just a generic app landing page. It is a personal project built from a real caregiving need at home.</li>
-          <li>The goal is not to sell a polished lifestyle brand. The goal is to offer something useful to families who are already carrying a lot.</li>
-          <li>Because Kinalm is still in beta, feedback matters. Early users are helping shape what gets improved next.</li>
-        </ul>
-        <div class="support-strip">If Kinalm ends up helping your family, the best support right now is trying it, sharing feedback, and passing it on to another caregiver who might need it.\n Email kinalm-caretracker@gmail.com</div>
-      </article>
-
-      <article class="panel" id="install">
-        <h2>How to install on Android</h2>
-        <ol class="list steps">
-          <li>Use the Request the APK button above to get the latest Android installer.</li>
-          <li>Open the file from your Downloads or Files app.</li>
-          <li>If Android asks, allow installs from that source.</li>
-          <li>Finish the install and open Kinalm.</li>
-          <li>Start adding the people, appointments, medications, and routines you want to track.</li>
-        </ol>
-      </article>
-    </section>
-
-    <p class="footer-note">Private family beta · Android APK shared directly with testers · Current beta: <strong>Kinalm v2.1.0</strong></p>
+<body>
+  <main>
+    <h1>Kinalm</h1>
+    <p>Download the latest Android release of Kinalm.</p>
+    <a href="https://github.com/trypod33/CareTracker/releases/download/v2.2.0/app-release.apk" target="_blank" rel="noopener noreferrer">Download Kinalm</a>
   </main>
 </body>
 </html>
