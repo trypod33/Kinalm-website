@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kinalm v2.3.2 — A warmer, simpler caregiving app for families</title>
-  <meta name="description" content="Kinalm is a private Android caregiving app built by a caregiver to help families manage medications, appointments, providers, routines, health logs, and weekly reports in one place.">
+  <meta name="description" content="Kinalm is an Android caregiving app built by a caregiver to help families manage medications, appointments, providers, routines, health logs, and weekly reports in one place.">
   <meta name="theme-color" content="#0e6a70">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,9 +54,7 @@
     a { color: inherit; text-decoration: none; }
     .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
 
-    .topbar {
-      padding: 20px 0 0;
-    }
+    .topbar { padding: 20px 0 0; }
 
     .topbar-row {
       display: flex;
@@ -87,9 +85,7 @@
       color: var(--primary);
     }
 
-    .hero {
-      padding: clamp(56px, 10vw, 112px) 0 64px;
-    }
+    .hero { padding: clamp(56px, 10vw, 112px) 0 64px; }
 
     .hero-grid {
       display: grid;
@@ -310,6 +306,10 @@
       background: linear-gradient(135deg, rgba(14,106,112,.08), rgba(43,94,149,.05));
     }
 
+    .release-box {
+      background: linear-gradient(135deg, rgba(14,106,112,.08), rgba(43,94,149,.05));
+    }
+
     .cta {
       background: linear-gradient(135deg, var(--primary), #377f87);
       color: #fff;
@@ -378,7 +378,7 @@
           <span class="eyebrow">Built by a caregiver for real caregiving life</span>
           <div class="mini-pill">Now available: Kinalm v2.3.2</div>
           <h1>Kinalm helps caregiving feel a little less overwhelming.</h1>
-          <p class="lead">Kinalm is a private Android app for caregivers and families who are juggling medications, appointments, routines, provider information, health logs, behavior notes, and all the small details that are too easy to lose on a busy day. It brings those pieces together in one calmer place so you can spend less time hunting for information and more time caring for the people who need you.</p>
+          <p class="lead">Kinalm is an Android caregiving app for families who are juggling medications, appointments, provider information, routines, health logs, behavior notes, and all the small details that are too easy to lose on a busy day. It brings those pieces together in one calmer place so you can spend less time hunting for information and more time caring for the people who need you.</p>
 
           <div class="story-box">
             <strong>Why Kinalm was built</strong>
@@ -387,7 +387,7 @@
 
           <div class="button-row">
             <a class="btn btn-primary" href="https://github.com/trypod33/Kinalm-app/releases/download/v2.3.2/app-release.apk" download="Kinalm-2.3.2.apk">Download the APK</a>
-            <a class="btn btn-secondary" href="#install">How to install it</a>
+            <a class="btn btn-secondary" href="https://github.com/trypod33/Kinalm-app/releases/tag/v2.3.2" target="_blank" rel="noopener noreferrer">View release notes</a>
           </div>
         </div>
 
@@ -458,10 +458,45 @@
       <div class="container">
         <div class="section-head split">
           <div>
+            <h2>What’s new in v2.3.2</h2>
+          </div>
+          <div class="section-copy">
+            <p>This release is focused on making Kinalm easier to distribute and easier to use as a hands-on family beta, while keeping the app centered on practical caregiving needs.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="feature release-box">
+            <h3>Release highlights</h3>
+            <ul>
+              <li>Current signed Android release published as Kinalm v2.3.2.</li>
+              <li>Updated release flow through GitHub Releases for direct APK access.</li>
+              <li>Build and packaging adjustments to keep release delivery working reliably.</li>
+              <li>Continued improvements around the core caregiving workflow inside the app.</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <h3>Who this release is for</h3>
+            <ul>
+              <li>Caregivers managing medications, appointments, and provider details.</li>
+              <li>Families who need one practical place for routines, notes, and health logs.</li>
+              <li>Early users who want to try Kinalm before a wider store release path exists.</li>
+              <li>People who are comfortable installing an Android APK directly.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head split">
+          <div>
             <h2>Why caregivers are using it</h2>
           </div>
           <div class="section-copy">
-            <p>Caregiving often means carrying dozens of small details in your head all day. Kinalm is meant to lower that mental load by making important information easier to enter, easier to find, and easier to share when someone asks, "What happened this week?"</p>
+            <p>Caregiving often means carrying dozens of small details in your head all day. Kinalm is meant to lower that mental load by making important information easier to enter, easier to find, and easier to share when someone asks, “What happened this week?”</p>
           </div>
         </div>
 
@@ -480,10 +515,10 @@
           <article class="feature">
             <h3>Private and practical</h3>
             <ul>
-              <li>Your data stays on the device.</li>
+              <li>Care data is stored locally on the device.</li>
               <li>Encrypted backup and restore is built in.</li>
               <li>App lock and PIN protection are available.</li>
-              <li>The APK is shared directly, so you do not need to wait on a Play Store listing.</li>
+              <li>The APK is shared directly, so you do not need to wait on a Play Store listing to try it.</li>
             </ul>
           </article>
         </div>
@@ -497,18 +532,18 @@
             <h2>How to install Kinalm on Android</h2>
           </div>
           <div class="section-copy">
-            <p>Because Kinalm is currently shared as a direct Android APK, installation takes a couple of extra steps. Once you do it the first time, it is straightforward.</p>
+            <p>Kinalm is currently shared as a direct Android APK through GitHub Releases, so installation takes a couple of extra steps the first time.</p>
           </div>
         </div>
 
         <div class="feature">
           <ol class="steps">
-            <li>Tap the <strong>Download the APK</strong> button on this page.</li>
-            <li>When your phone finishes downloading, open the APK from your browser, Downloads app, or Files app.</li>
-            <li>If Android blocks the install, tap the prompt to allow installs from that source, then confirm that you want to continue.</li>
-            <li>Return to the APK file and tap <strong>Install</strong>.</li>
+            <li>Tap <strong>Download the APK</strong> on this page.</li>
+            <li>When the download finishes, open the file from your browser, Downloads app, or Files app.</li>
+            <li>If Android shows a warning, allow installs from that source for your browser or file manager.</li>
+            <li>Return to the APK and tap <strong>Install</strong>.</li>
             <li>When installation finishes, open Kinalm and create your account on the device.</li>
-            <li>Start by adding the people you care for, then add medications, appointments, providers, and routines.</li>
+            <li>Start by adding the people you care for, then fill in medications, appointments, providers, and routines.</li>
           </ol>
         </div>
       </div>
@@ -518,9 +553,10 @@
       <div class="container">
         <div class="cta">
           <h2 style="margin-bottom:14px;">Download Kinalm and try it with your family</h2>
-          <p>Kinalm is still a hands-on family beta, and every download helps shape what gets improved next. If it makes caregiving easier for your family, you can also support the project on Ko-fi.</p>
+          <p>Kinalm is still a hands-on family beta, and every download helps shape what gets improved next. If it helps your family, you can also support the project on Ko-fi.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="https://github.com/trypod33/Kinalm-app/releases/download/v2.3.2/app-release.apk" download="Kinalm-v2.3.2.apk">Download the APK</a>
+            <a class="btn btn-secondary" href="https://github.com/trypod33/Kinalm-app/releases/tag/v2.3.2" target="_blank" rel="noopener noreferrer">Open GitHub release</a>
             <a class="btn btn-secondary" href="https://ko-fi.com/trypod33" target="_blank" rel="noopener noreferrer">Support on Ko-fi</a>
           </div>
         </div>
