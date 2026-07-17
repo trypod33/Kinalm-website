@@ -13,7 +13,7 @@ Both files are kept in sync. When updating site content (new release highlights,
 
 ## Current version
 
-The site currently reflects **Kinalm v2.5.0**. Update the following when cutting a new release:
+The site currently reflects **Kinalm v2.5.1**. Update the following when cutting a new release:
 
 - `<title>` tag and meta description
 - "Now available: Kinalm vX.X.X" pill in the hero
