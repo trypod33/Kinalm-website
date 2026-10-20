@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinalm — Privacy Policy &amp; Terms of Reference</title>
+  <meta name="description" content="Kinalm privacy policy: your family's care data stays on your device. What the app stores, the only network calls it makes, and your choices.">
+  <link rel="canonical" href="https://trypod33.github.io/Kinalm-website/privacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kinalm">
+  <meta property="og:title" content="Kinalm — Privacy Policy">
+  <meta property="og:description" content="Your family's care data stays on your device. What Kinalm stores, the only network calls it makes, and your choices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --surface: #fffdfa;
+      --surface-2: #f3efe8;
+      --text: #231f1a;
+      --muted: #6b645c;
+      --faint: #91877d;
+      --primary: #0e6a70;
+      --primary-hover: #0a5055;
+      --primary-soft: rgba(14,106,112,0.10);
+      --secondary: #2b5e95;
+      --secondary-soft: rgba(43,94,149,0.10);
+      --success: #477a32;
+      --border: rgba(25, 22, 18, 0.10);
+      --divider: rgba(25, 22, 18, 0.08);
+      --shadow-sm: 0 10px 24px rgba(32, 25, 19, 0.06);
+      --shadow-lg: 0 30px 70px rgba(32, 25, 19, 0.10);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --radius-full: 999px;
+      --content: 1120px;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Inter', Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-body);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(14,106,112,.12), transparent 28%),
+        radial-gradient(circle at 88% 12%, rgba(43,94,149,.10), transparent 22%),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+
+    .topbar { padding: 20px 0 0; }
+
+    .topbar-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      color: var(--primary);
+    }
+
+    .hero { padding: clamp(56px, 10vw, 112px) 0 64px; }
+
+    .hero-grid {
+      display: grid;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .eyebrow,
+    .mini-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .mini-pill {
+      margin-top: 14px;
+      background: var(--secondary-soft);
+      color: var(--secondary);
+    }
+
+    h1, h2 {
+      font-family: var(--font-display);
+      letter-spacing: -0.04em;
+      line-height: .98;
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(3rem, 7vw, 5.7rem);
+      max-width: 10ch;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin-top: 20px;
+      max-width: 62ch;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .story-box {
+      margin-top: 24px;
+      max-width: 66ch;
+      padding: 18px 18px 18px 20px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(14,106,112,.08), rgba(43,94,149,.06));
+      border: 1px solid rgba(14,106,112,.14);
+      color: #4c433b;
+    }
+
+    .story-box strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: var(--radius-full);
+      font-size: 15px;
+      font-weight: 800;
+      transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover { background: var(--primary-hover); }
+
+    .btn-secondary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .panel {
+      background: rgba(255,253,250,.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 20px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .phone {
+      background: linear-gradient(180deg, #fffefd, #f5f1ea);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: 18px;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+      color: var(--faint);
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card + .card { margin-top: 14px; }
+
+    .mini-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .pill {
+      padding: 6px 10px;
+      border-radius: var(--radius-full);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .line {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px solid var(--divider);
+      color: var(--muted);
+    }
+
+    section { padding: 28px 0 72px; }
+
+    .section-head {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      max-width: 64ch;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature p,
+    .feature li,
+    .steps li {
+      color: var(--muted);
+    }
+
+    ul, ol {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(14,106,112,.08), rgba(43,94,149,.05));
+    }
+
+    .release-box {
+      background: linear-gradient(135deg, rgba(14,106,112,.08), rgba(43,94,149,.05));
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--primary), #377f87);
+      color: #fff;
+      border-radius: 30px;
+      padding: clamp(28px, 5vw, 44px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta p,
+    .cta li {
+      color: rgba(255,255,255,.92);
+    }
+
+    .cta .btn-primary {
+      background: #fff;
+      color: var(--primary);
+    }
+
+    .cta .btn-secondary {
+      background: rgba(255,255,255,.10);
+      color: #fff;
+      border-color: rgba(255,255,255,.26);
+    }
+
+    footer {
+      padding: 0 0 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (min-width: 860px) {
+      .hero-grid { grid-template-columns: minmax(0,1.02fr) minmax(340px,.98fr); }
+      .section-head.split { grid-template-columns: 1fr 1fr; align-items: end; }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .topbar-row { flex-direction: column; align-items: flex-start; }
+      .button-row { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+  <style>
+    .legal-wrap { max-width: 760px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) 1rem 64px; }
+    .legal-wrap .eyebrow { margin-bottom: 12px; }
+    .legal-wrap h1 { font-family: var(--font-display); font-size: clamp(34px, 5vw, 52px); font-weight: 400; margin: 0 0 10px; }
+    .legal-updated { color: var(--muted); font-size: 14px; margin-bottom: 36px; }
+    .legal-sec { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 22px 24px; margin-bottom: 14px; }
+    .legal-sec h2 { font-size: 17px; font-weight: 700; margin: 0 0 8px; }
+    .legal-sec p { margin: 0; color: var(--text); font-size: 15px; }
+    .legal-back { display: inline-block; margin-top: 24px; color: var(--primary); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="legal-wrap">
+    <div class="eyebrow">Kinalm</div>
+    <h1>Privacy Policy &amp; Terms of Reference</h1>
+    <p class="legal-updated">Last updated: October 2026 &middot; Applies to Kinalm CareTracker (com.kinalm) for Android.</p>
+    <section class="legal-sec"><h2>1. Overview</h2><p>Kinalm is a personal health, vital signs, nutrition, and caregiving record-keeping app built with a privacy-first, offline-first approach. It works without mandatory account registration, without central cloud servers, and without transmitting your personal or medical care data off your device.</p></section>
+<section class="legal-sec"><h2>2. Data you enter in the app</h2><p>Kinalm processes and stores only the information you voluntarily enter, including vitals and health metrics (blood pressure, heart rate, blood sugar, A1C, blood oxygen, sleep, water intake, weight, mood, symptom notes); nutrition and dietary tracking (calories, protein, carbs, fat, fiber, sugar, sodium, cholesterol, meal items, custom goals and food overrides); medication management (names, dosages, schedules, intake logs, pill counts, refill thresholds, prescriber details); caregiving records (habits, tasks, care notes, behavior and meltdown logs, growth and milestone tracking, appointments, provider contacts, weekly summaries); and profile customization (local profile names, colors, display preferences, optional local PINs).</p></section>
+<section class="legal-sec"><h2>3. Default local storage and encryption</h2><p>All records, logs, custom food overrides, and settings are saved strictly on your device inside an encrypted local database (SQLCipher). There is no remote server or cloud account system for your health records. Your data leaves your device only when you export an encrypted backup, share a report, or enable one of the optional connections below.</p></section>
+<section class="legal-sec"><h2>4. Nutrition and food lookups (third-party food databases)</h2><p>When you search for a food item or scan a product barcode, Kinalm sends only that search text or barcode number to public nutrition databases, currently USDA FoodData Central and Open Food Facts, to fetch nutrition numbers. These requests contain no account information, no name, no email, no device identifier, no location, and none of your health records. Results are stored only on your device. Foods saved as custom overrides are checked first, so an online lookup only happens for items you search for.</p></section>
+<section class="legal-sec"><h2>5. Google Calendar sync (optional)</h2><p>Kinalm can connect to the Google Calendar account configured on your device so appointments and events appear in both the app and your calendar. This is optional and stays off until you enable it. Synced event data passes through your device calendar system under the account you connected; Google's own privacy practices govern that account. You can disconnect the calendar at any time in Settings.</p></section>
+<section class="legal-sec"><h2>6. Optional contact and update communications</h2><p>Kinalm offers an optional contact and updates feature for release news or support. It is purely voluntary. If you submit a request, we receive only the email address and preferences you explicitly submit via your device email app. That contact info is never linked to your in-app health entries, vitals, nutrition records, or caregiving logs.</p></section>
+<section class="legal-sec"><h2>7. On-device Assistant API (optional)</h2><p>Kinalm can run a small helper server on your own device so a local assistant app you pair with it (such as Friday) can read and write entries directly. It is off by default, listens only on the device itself (127.0.0.1, never the network), and is protected by a pairing token shown only to you in Settings. This feature does not transmit any data to a remote server.</p></section>
+<section class="legal-sec"><h2>8. What we do not collect</h2><p>We do not collect, monitor, track, or sell: your name, address, or phone number; precise GPS location data; advertising IDs or cross-app usage telemetry; or your in-app health measurements, vitals, nutrition entries, or medication records.</p></section>
+<section class="legal-sec"><h2>9. Third-party services and analytics</h2><p>Kinalm does not bundle ad networks, telemetry trackers, or analytics SDKs. The only third-party network calls the app makes are the nutrition and barcode lookups described in Section 4, and those carry only your search text or a barcode number.</p></section>
+<section class="legal-sec"><h2>10. Backup and export security</h2><p>Backups are encrypted with AES using a passphrase of your choice. We never store or access your backup files or encryption keys. You are responsible for storing backups in a safe location.</p></section>
+<section class="legal-sec"><h2>11. Device permissions</h2><p>Permissions enable device-level features only and are never used to harvest or send your private logs: notifications and exact alarms (medication, habit, task, and appointment reminders); camera (scanning product barcodes, processed on the device); calendar access (optional Google Calendar sync); activity recognition and body sensors (step counts and related entries you log); and storage access (encrypted backup export and import).</p></section>
+<section class="legal-sec"><h2>12. Your rights and choices</h2><p>Because all data resides locally on your device, you can modify, export, or delete your health records at any time within Kinalm, or by clearing the app data in your Android system settings.</p></section>
+<section class="legal-sec"><h2>13. Contact</h2><p>Questions about this policy? Email kinalm.caretracker@gmail.com or reach us on Facebook at Kinalm CareTracker.</p></section>
+    <a class="legal-back" href="https://trypod33.github.io/Kinalm-website/">&larr; Back to kinalm.app</a>
+  </main>
+  <footer>
+    <div class="container">
+      <span>Kinalm v2.7.0 for Android &middot; Built with caregiving families in mind.</span>
+    </div>
+  </footer>
+</body>
+</html>
